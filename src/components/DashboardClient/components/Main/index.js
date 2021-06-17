@@ -7,8 +7,11 @@ import OnlineTraining from '../../pages/OnlineTraining';
 import Profile from '../../pages/Profile';
 import Progress from '../../pages/Progress';
 import Trainings from '../../pages/Trainings';
+import styled from 'styled-components'
 
-
+const Container = styled.div`
+    margin-left: 5px;
+`
 
 const Main = () => {
     const [title, setTitle] = useState('');
@@ -41,7 +44,7 @@ const Main = () => {
     }, [])
 
     return (
-        <>
+        <Container>
             <Switch>
                 <Route path="/progress" component={Progress}/>
                 <Route path="/onlineTraining" component={OnlineTraining}/>
@@ -50,7 +53,7 @@ const Main = () => {
                 <Route path="/profile" component={Profile}/>
                 <Route component={ErrorPage}/>
             </Switch>
-        </>
+        </Container>
     )
 }
 
