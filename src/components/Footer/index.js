@@ -45,18 +45,11 @@ const Footer = () => {
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Videos</FooterLinkTitle>
-                                <FooterLink to="/signin">Submit Video</FooterLink>
-                                <FooterLink to="/signin">Ambassadors</FooterLink>
-                                <FooterLink to="/signin">Agency</FooterLink>
-                                <FooterLink to="/signin">Influencer</FooterLink>
-                        </FooterLinkItems>
-                        <FooterLinkItems>
                             <FooterLinkTitle>Social Media</FooterLinkTitle>
-                                <FooterLink to="/signin">Instagram</FooterLink>
-                                <FooterLink to="/signin">Facebook</FooterLink>
-                                <FooterLink to="/signin">Youtube</FooterLink>
-                                <FooterLink to="/signin">Twitter</FooterLink>
+                                <FooterLink a="https://www.instagram.com">Instagram</FooterLink>
+                                <FooterLink a="https://www.facebook.com">Facebook</FooterLink>
+                                <FooterLink a="https://www.youtube.com">Youtube</FooterLink>
+                                <FooterLink a="https://www.twitter.com">Twitter</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
@@ -66,18 +59,6 @@ const Footer = () => {
                             Gym Nation
                         </SocialLogo>
                         <WebsiteRights>Gym Nation © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
-                        <SocialIcons>
-                            <SocialIconLink href="/" target="_blank" aria-label="Facebook"></SocialIconLink>
-                            <FaFacebook />
-                            <SocialIconLink href="/" target="_blank" aria-label="Instagram"></SocialIconLink>
-                            <FaInstagram />
-                            <SocialIconLink href="/" target="_blank" aria-label="Youtube"></SocialIconLink>
-                            <FaYoutube />
-                            <SocialIconLink href="https://www.twitter.com" target="_blank" aria-label="Twitter"></SocialIconLink>
-                            <FaTwitter />
-                            <SocialIconLink href="/" target="_blank" aria-label="LinkedIn"></SocialIconLink>
-                            <FaLinkedin />
-                        </SocialIcons>
                     </SocialMediaWrap>
                 </SocialMedia>
             </FooterWrap>

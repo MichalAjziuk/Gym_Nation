@@ -5,10 +5,10 @@ import Home from './pages';
 import SignUp from './components/Signup'
 import SignIn from './components/Signin'
 import { AuthProvider } from './contexts/AuthContext';
-import DashboardClient from './components/DashboardClient';
 import PrivateRoute from './pages/PrivateRoute'
 import ForgotPassword from './components/ForgotPassword'
-import UpdateProfile from './components/UpdateProfile';
+import DashboardClient from './components/DashboardClient/dashboardClient'
+import Comments from './components/Comments';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path="/signin" component={SignIn} exact />
           <PrivateRoute path="/dashboard-client" component={DashboardClient} exact />
           <Route path="/forgot-password" component={ForgotPassword} />
-          <Route path="/update-profile" component={UpdateProfile} />
+          <Route path="/comments" component={Comments} />
         </Switch>
       </AuthProvider>
     </Router>

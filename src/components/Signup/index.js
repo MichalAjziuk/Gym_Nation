@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import Img from './signup.jpg'
 import {
     Container,
     Icon,
@@ -12,7 +13,9 @@ import {
     FormError,
     FormInput, 
     FormLabel, 
-    FormWrap 
+    FormWrap,
+    Photo,
+    IconWrap
     } from './SignupElements'
 
 const SignUp = () => {
@@ -45,8 +48,11 @@ const SignUp = () => {
     return (
         <>
           <Container>
+              <IconWrap>
+                <Icon to='/'>Gym Nation</Icon>
+              </IconWrap>
               <FormWrap>
-                  <Icon to='/'>Gym Nation</Icon>
+                  <Photo src={Img}></Photo>
                   <FormContent>
                       <Form onSubmit={handleSubmit}>
                           <FormH1>Change your life today !</FormH1>

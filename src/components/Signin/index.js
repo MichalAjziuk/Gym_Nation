@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import Img from './signin.jpg'
 import {
     Container,
     Icon,
@@ -12,7 +13,9 @@ import {
     FormError,
     FormInput, 
     FormLabel, 
-    FormWrap 
+    FormWrap,
+    Photo,
+    IconWrap
     } from './SigninElements'
 
 
@@ -31,7 +34,7 @@ const SignIn = () => {
             setError('')
             setLoading(true)
             await signin(emailRef.current.value, passwordRef.current.value)
-            history.push("/dashboard-admin")
+            history.push("/dashboard-client")
         } catch {
             setError("Failed to sign in")
         }
@@ -41,8 +44,11 @@ const SignIn = () => {
     return (
         <>
           <Container>
+            <IconWrap>
+                <Icon to='/'>Gym Nation</Icon>
+            </IconWrap>
               <FormWrap>
-                  <Icon to='/'>Gym Nation</Icon>
+                  <Photo src={Img}></Photo>
                   <FormContent>
                       <Form onSubmit={handleSubmit}>
                           <FormH1>Sign in to your account</FormH1>

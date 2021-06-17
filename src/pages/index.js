@@ -3,10 +3,11 @@ import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
-import { homeObjOne, homeObjTwo } from '../components/InfoSection/Data'
+import { homeObjOne } from '../components/InfoSection/Data'
 import Services from '../components/Services'
 import Footer from '../components/Footer'
 import MoveList from '../components/MoveList'
+import Comments from '../components/Comments'
 
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
           <Services />
           <InfoSection {...homeObjOne}/>
           <MoveList />
-          <InfoSection {...homeObjTwo}/>
+          <Comments />
           <Footer/>
         </>
     );

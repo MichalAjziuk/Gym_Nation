@@ -12,21 +12,8 @@ export const Container = styled.div`
     overflow: hidden;
     background-color: #0C969C;
 `
-
-export const FormWrap = styled.div`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @media screen and (max-width: 400px) {
-        height: 80%;
-    }
-` 
-
 export const Icon = styled(Link)`
     margin-left: 32px;
-    margin-top: 32px;
     text-decoration: none;
     color: #fff;
     font-weight: 700;
@@ -37,6 +24,18 @@ export const Icon = styled(Link)`
         margin-top: 8px;
     }
 ` 
+
+export const FormWrap = styled.div`
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media screen and (max-width: 400px) {
+        height: 80%;
+    }
+` 
+
+
 export const FormContent = styled.div`
     height: 100%;
     display: flex;
@@ -52,12 +51,13 @@ export const Form = styled.form`
     background: #010101;
     max-width: 400px;
     height: auto;
-    width: 100%;
+    width: 600px;
     z-index: 1;
     display: grid;
     margin: 0 auto;
     padding: 80px 32px;
-    border-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
     @media screen and (max-width: 400px) {
@@ -111,4 +111,17 @@ export const Text = styled.span`
     margin-top: 24px;
     color: #fff;
     font-size: 14px;
+`
+
+export const Photo = styled.img`
+    display: flex;
+    width: 400px;
+    height: 576px;
+    margin-top: 162px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+`
+export const IconWrap = styled.div`
+    margin-top: 20px;
 `
