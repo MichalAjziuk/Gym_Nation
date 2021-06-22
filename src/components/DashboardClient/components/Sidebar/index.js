@@ -5,6 +5,7 @@ import Icon3 from './images/trainings.svg'
 import Icon4 from './images/diets.svg'
 import Icon5 from './images/user.svg'
 import ProgressBar from './ProgressBar'
+import firebase from '../../../../firebase'
 
 import {
     Container,
@@ -56,7 +57,7 @@ const Sidebar = () => {
                         <IconItem src={Icon5}/>
                         <TitleItem>Your profile</TitleItem>
                     </MenuCard>
-                    <MenuCard>
+                    <MenuCard onClick={() => firebase.auth().signOut()}>
                         <IconItem src={Icon5}/>
                         <TitleItem>Logout</TitleItem>
                     </MenuCard>

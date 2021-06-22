@@ -5,14 +5,17 @@ import UsernameInput from './components/UsernameInput'
 import SubmitButton from './components/SubmitButton'
 import { useHistory } from 'react-router-dom'
 import { setUsername } from '../store/actions/dashboardActions'
+import { registerNewUser } from '../utils/wssConnection/wssConnection'
 import './LoginPage.css'
 
 const LoginPage = ({saveUsername}) => {
     const [username, setUsername] = useState('');
     const history = useHistory();
+
     const handleSubmitButtonPressed = () => {
-        history.push('/onlineTraining/dashboard');
+        registerNewUser(username);
         saveUsername(username);
+        history.push('/onlineTraining/dashboard');
     };
 
     return (

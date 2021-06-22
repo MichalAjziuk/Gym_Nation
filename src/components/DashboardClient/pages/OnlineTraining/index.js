@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from './Dashboard/Dashboard';
 import LoginPage from './LoginPage/LoginPage';
-import { connectWithSocket } from './utils/wssConnection/wssConnection';
+import { connectWithWebSocket } from './utils/wssConnection/wssConnection';
 
 const OnlineTraining = () => {
 
     useEffect (() => {
-        connectWithSocket();
+        connectWithWebSocket();
     }, []);
 
     return (

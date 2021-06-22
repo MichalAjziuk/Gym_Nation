@@ -113,6 +113,15 @@ export const Text = styled.span`
     font-size: 14px;
 `
 
+export const NavigationLink = styled(Link)`
+    text-align: center;
+    margin-top: 24px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0C969C;
+`
+
 export const Photo = styled.img`
     display: flex;
     width: 400px;

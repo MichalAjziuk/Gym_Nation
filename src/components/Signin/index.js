@@ -15,7 +15,8 @@ import {
     FormLabel, 
     FormWrap,
     Photo,
-    IconWrap
+    IconWrap,
+    NavigationLink
     } from './SigninElements'
 
 
@@ -58,8 +59,8 @@ const SignIn = () => {
                           <FormLabel htmlFor='for'>Password</FormLabel>
                           <FormInput type='password' ref={passwordRef} required />
                           <FormButton disabled={loading} type='submit'>Continue</FormButton>
-                          <Text><Link to="/forgot-password">Forgot password ?</Link></Text>
-                          <Text>You don't have account. <Link to='/signup'>Click here</Link></Text>
+                          <NavigationLink to="/forgot-password">Forgot password ?</NavigationLink>
+                          <Text>You don't have account. <NavigationLink to='/signup'>Click here</NavigationLink></Text>
                       </Form>
                   </FormContent>
               </FormWrap>

@@ -126,3 +126,11 @@ export const Photo = styled.img`
     border-bottom-left-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 `
+export const NavigationLink = styled(Link)`
+    text-align: center;
+    margin-top: 24px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0C969C;
+`

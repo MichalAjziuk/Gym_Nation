@@ -15,7 +15,8 @@ import {
     FormLabel, 
     FormWrap,
     Photo,
-    IconWrap
+    IconWrap,
+    NavigationLink
     } from './SignupElements'
 
 const SignUp = () => {
@@ -64,7 +65,7 @@ const SignUp = () => {
                           <FormLabel htmlFor='for'>Password Confirmation</FormLabel>
                           <FormInput type='password' ref={passwordConfirmRef} required />
                           <FormButton disabled={loading} type='submit'>Continue</FormButton>
-                          <Text>Already you have account ? <Link to='/signin'>Log in</Link></Text>
+                          <Text>Already you have account ? <NavigationLink to='/signin'>Log in</NavigationLink></Text>
                       </Form>
                   </FormContent>
               </FormWrap>
