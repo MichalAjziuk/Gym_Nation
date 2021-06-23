@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+    background: #f9f9f9;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -12,7 +13,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
+    height: 800px;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -25,10 +26,10 @@ export const InfoRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+    grid-template-areas: 'col2 col1';
 
     @media screen and (max-width: 768px){
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
+        grid-template-areas: 'col1' 'col2'
     }
 `
 
@@ -66,7 +67,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
+    color: #010606;
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -78,7 +79,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
+    color: #010606;
 `
 
 export const BtnWrap = styled.div`
@@ -96,3 +97,24 @@ export const Img = styled.img`
     margin: 0 0 10px 0;
     padding-right: 0;
 `
+export const Button = styled(Link)`
+    border-radius: 50px;
+    background: #010606;
+    white-space: nowrap;
+    padding: 14px 48px ;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #0C969C;
+    }
+`;

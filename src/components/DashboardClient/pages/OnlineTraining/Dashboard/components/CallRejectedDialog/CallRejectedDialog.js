@@ -10,7 +10,7 @@ const CallRejectedDialog = ({ reason, hideCallRejectedDialog }) => {
                 reason: ''
             });    
         },[4000]);
-    }, []);
+    },);
 
     return (
         <div className='call_rejected_dialog'>

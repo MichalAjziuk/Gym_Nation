@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../ButtonElements'
+import img from '../../images/healthy_lifestyle.svg'
 import {
     InfoContainer,
     InfoWrapper,
@@ -12,52 +12,30 @@ import {
     Subtitle,
     BtnWrap,
     ImgWrap,
-    Img
+    Img,
+    Button
 } from './InfoElements';
 
-const InfoSection = ({
-    lightBg,
-    id,
-    imgStart,
-    topLine, 
-    lightText, 
-    headline, 
-    darkText, 
-    description,
-    buttonLabel, 
-    img, 
-    alt,
-    primary,
-    dark,
-    dark2
-    }) => {
+const InfoSection = () => {
     return (
         <>
-          <InfoContainer lightBg={lightBg} id={id}>
+          <InfoContainer id='app'>
               <InfoWrapper>
-                  <InfoRow imgStart={imgStart}>
+                  <InfoRow>
                       <Column1>
                         <TextWrapper>
-                            <TopLine>{topLine}</TopLine>
-                            <Heading lightText={lightText}>{headline}</Heading>
-                            <Subtitle darkText={darkText}>{description}</Subtitle>
+                            <TopLine>WEB APP</TopLine>
+                            <Heading>Application that makes success easier</Heading>
+                            <Subtitle>We give you the tool - now your move.
+                             No matter where you are. Regardless of when you want to exercise. Gym Nation is always with you.</Subtitle>
                             <BtnWrap>
-                                <Button to='/signup' 
-                                  smooth={true}
-                                   duration={500}
-                                   spy={true}
-                                   exact={true}
-                                   offset={-80}
-                                   primary={primary ? 0 : 1}
-                                   dark={dark ? 0 : 1}
-                                   dark2={dark2 ? 1 : 0} 
-                                >{buttonLabel}</Button>
+                                <Button to='/signup'>Get started</Button>
                             </BtnWrap>
                         </TextWrapper>
                       </Column1>
                       <Column2>
                         <ImgWrap>
-                            <Img src={img} alt={alt}/>
+                            <Img src={img} alt='healthly_life'/>
                         </ImgWrap>
                       </Column2>
                   </InfoRow>

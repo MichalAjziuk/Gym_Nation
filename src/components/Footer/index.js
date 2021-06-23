@@ -43,10 +43,10 @@ const Footer = () => {
                     <FooterLinksWrapper>
                         <FooterLinkItems>
                             <FooterLinkTitle>Social Media</FooterLinkTitle>
-                                <FooterLink a="https://www.instagram.com">Instagram</FooterLink>
-                                <FooterLink a="https://www.facebook.com">Facebook</FooterLink>
-                                <FooterLink a="https://www.youtube.com">Youtube</FooterLink>
-                                <FooterLink a="https://www.twitter.com">Twitter</FooterLink>
+                                <FooterLink to="/signin">Instagram</FooterLink>
+                                <FooterLink to="/signin">Facebook</FooterLink>
+                                <FooterLink to="/signin">Youtube</FooterLink>
+                                <FooterLink to="/signin">Twitter</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>

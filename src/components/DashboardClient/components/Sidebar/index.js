@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Icon1 from './images/your_training.svg'
 import Icon2 from './images/broadcasting.svg'
 import Icon3 from './images/trainings.svg'
@@ -20,10 +20,10 @@ import {
 
 
 const Sidebar = () => {
-    const [progress, setProgress] = useState(0);
+    // const [progress, setProgress] = useState(0);
     const state = {
         size: 200,
-        progress,
+        // progress,
         strokeWidth: 12,
         circleOneStroke: '#B8C0C0',
         circleTwoStroke: '#000000'
