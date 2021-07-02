@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
     min-height: 692px;
-    position: fixed;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     bottom: 0;
     left: 0;
     right: 0;
@@ -12,6 +14,11 @@ export const Container = styled.div`
     overflow: hidden;
     background-color: #0C969C;
 `
+export const IconWrap = styled.div`
+    margin-top: 20px;
+    position: relative;
+`
+
 export const Icon = styled(Link)`
     margin-left: 32px;
     text-decoration: none;
@@ -26,33 +33,37 @@ export const Icon = styled(Link)`
 ` 
 
 export const FormWrap = styled.div`
-    height: 900px;
+    height: 600px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     @media screen and (max-width: 400px) {
         height: 80%;
     }
 ` 
 
-
 export const FormContent = styled.div`
     height: 100%;
+    width: 800px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    margin-top: 30px;
+`
 
-    @media screen and (max-width: 480px) {
-        padding: 10px;
-    }
+export const Photo = styled.img`
+    display: flex;
+    width: 400px;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 `
 
 export const Form = styled.form`
     background: #010101;
-    max-width: 400px;
     height: auto;
-    width: 600px;
-    z-index: 1;
+    width: 60%;
     display: grid;
     margin: 0 auto;
     padding: 80px 32px;
@@ -64,15 +75,17 @@ export const Form = styled.form`
         padding: 32px 32px;
     }
 `
+export const FormErrorWrap = styled.div`
+    height: 30px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: red;
+    padding: 5px;
+`
+
 export const FormError = styled.a`
     color: #fff;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 10px;
-    background-color: red;
-    padding: 10px;
-    border-radius: 4px;
-    display: none;
 `
 
 export const FormH1 = styled.h1`
@@ -122,15 +135,4 @@ export const NavigationLink = styled(Link)`
     color: #0C969C;
 `
 
-export const Photo = styled.img`
-    display: flex;
-    width: 400px;
-    height: 576px;
-    margin-top: 162px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-`
-export const IconWrap = styled.div`
-    margin-top: 20px;
-`
+

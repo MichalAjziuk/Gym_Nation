@@ -18,7 +18,12 @@ import Person6 from '../../images/JadaWhitworth.jpg'
 import Person7 from '../../images/PearlValdez.jpg'
 import Person8 from '../../images/LynnCantu.jpg'
 import Person9 from '../../images/GinoGoldsmith.jpg'
-import Person10 from '../../images/MacsenTran.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/swiper.scss'
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 import {
     MoveListContainer,
@@ -35,7 +40,9 @@ import {
     Img
 } from './MoveListElements'
 
-const MoveList = (cardTitle, cardSubTitle, img, alt) => {
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
+const MoveList = () => {
     return (
         <>
          <MoveListContainer id='coaches'>
@@ -83,76 +90,97 @@ const MoveList = (cardTitle, cardSubTitle, img, alt) => {
                 </TableItem>
              </TableWrap>
              <MoveListWrapper>
-                 <MoveListCard>
-                     <CardTitle>Grover Morgan</CardTitle>
-                     <CardSubTitle>HIIT, Full Body Workout</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person1}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Rimsha Montgo</CardTitle>
-                     <CardSubTitle>Cardio, Tabata</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person2}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Tonisha Sheeha</CardTitle>
-                     <CardSubTitle>Flat belly</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person3}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Jayne Kidd</CardTitle>
-                     <CardSubTitle>Yoga, Stretching</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person4}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Nattie Ridley</CardTitle>
-                     <CardSubTitle>Fitness</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person5}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Jada White</CardTitle>
-                     <CardSubTitle>Cardio, HIIT</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person6}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Pearl Valdez</CardTitle>
-                     <CardSubTitle>Yoga</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person7}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Lynn Cantu</CardTitle>
-                     <CardSubTitle>Cardio</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person8}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Gino Goldsmith</CardTitle>
-                     <CardSubTitle>Strength Workout, Cardio</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person9}/>
-                     </ImgWrap>
-                 </MoveListCard>
-                 <MoveListCard>
-                     <CardTitle>Macsen Tran</CardTitle>
-                     <CardSubTitle>HIIT</CardSubTitle>
-                     <ImgWrap>
-                        <Img src={Person10}/>
-                     </ImgWrap>
-                 </MoveListCard>
+                 <Swiper 
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                 >
+                 <SwiperSlide>
+                    <MoveListCard>
+                        <CardTitle>Grover Morgan</CardTitle>
+                        <CardSubTitle>HIIT, Full Body Workout</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person1}/>
+                        </ImgWrap>
+                    </MoveListCard>
+                 </SwiperSlide>
+                 <SwiperSlide>
+                    <MoveListCard>
+                        <CardTitle>Rimsha Montgo</CardTitle>
+                        <CardSubTitle>Cardio, Tabata</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person2}/>
+                        </ImgWrap>
+                    </MoveListCard>
+                 </SwiperSlide>
+                 <SwiperSlide>
+                    <MoveListCard>
+                        <CardTitle>Tonisha Sheeha</CardTitle>
+                        <CardSubTitle>Flat belly</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person3}/>
+                        </ImgWrap>
+                    </MoveListCard>
+                 </SwiperSlide>
+                 <SwiperSlide>
+                    <MoveListCard>
+                        <CardTitle>Jayne Kidd</CardTitle>
+                        <CardSubTitle>Yoga, Stretching</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person4}/>
+                        </ImgWrap>
+                    </MoveListCard>
+                 </SwiperSlide>
+                 <SwiperSlide>
+                    <MoveListCard>
+                        <CardTitle>Nattie Ridley</CardTitle>
+                        <CardSubTitle>Fitness</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person5}/>
+                        </ImgWrap>
+                    </MoveListCard>
+                 </SwiperSlide>
+                 <SwiperSlide>
+                    <MoveListCard>
+                        <CardTitle>Jada White</CardTitle>
+                        <CardSubTitle>Cardio, HIIT</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person6}/>
+                        </ImgWrap>
+                    </MoveListCard>
+                 </SwiperSlide>
+                    <SwiperSlide>
+                        <MoveListCard>
+                        <CardTitle>Pearl Valdez</CardTitle>
+                        <CardSubTitle>Yoga</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person7}/>
+                        </ImgWrap>
+                        </MoveListCard>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <MoveListCard>
+                        <CardTitle>Lynn Cantu</CardTitle>
+                        <CardSubTitle>Cardio</CardSubTitle>
+                        <ImgWrap>
+                            <Img src={Person8}/>
+                        </ImgWrap>
+                        </MoveListCard>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <MoveListCard>
+                            <CardTitle>Gino Goldsmith</CardTitle>
+                            <CardSubTitle>Strength Workout, Cardio</CardSubTitle>
+                            <ImgWrap>
+                                <Img src={Person9}/>
+                            </ImgWrap>
+                        </MoveListCard>
+                    </SwiperSlide>
+                 </Swiper>
              </MoveListWrapper>
          </MoveListContainer>  
         </>

@@ -4,16 +4,19 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 600px;
-`
-export const ButtonTitle = styled.h1`
-    display: flex;
     justify-content: center;
-    margin-top: 50px;
+    align-items: center;
+`
+export const Wrap = styled.div`
+    text-align: center;
+`
+export const Title = styled.h1`
+    margin-bottom: 10px;
 `
 export const CommentsButton = styled.button`
     display: flex;
     justify-content: center;
-    margin: 50px 800px 0 800px;
+    margin: 30px 800px 0 800px;
     padding: 20px;
     color: #000;
     border-radius: 4px;

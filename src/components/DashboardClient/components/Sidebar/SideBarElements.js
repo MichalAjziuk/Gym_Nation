@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
-    width: 300px;
-    height: 900px;
-    position: sticky;
-    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
     border-right-style: solid; 
     border-width: 1px;
     border-color: #B8C0C0;
@@ -17,23 +16,23 @@ export const LogoWrap = styled.div`
 export const Logo = styled.h1`
     color: #0C969C;
     justify-self: flex-start;
-    cursor: pointer;
     font-size: 28px;
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    margin-left: 60px;
     font-weight: bold;
     text-decoration: none;
     text-shadow: 2px 3px #000;
 `
 
-export const ProgressWrap = styled.div`
-    height: 120px;
-    margin-left: 50px;
+export const CalendarWrap = styled.div`
+    height: 220px;
+    margin-left: 30px;
+    margin-right: 30px;
 `
 
 export const MenuWrap = styled.div`
-    height: 500px;
+    height: 50%;
     margin-top: 100px;
 `
 

@@ -52,7 +52,7 @@ export const Name = styled.h3`
 export const MoveListWrapper = styled.div`
     background-color: #000000;
     height: 500px;
-    width: 5000px;
+    width: 1200px;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -69,16 +69,6 @@ export const MoveListCard = styled.div`
     width: 300px;
     height: 460px;
     margin: 20px;
-    animation: move 40s linear infinite;
-
-    @keyframes move {
-        0%{
-            transform:translate(-1500px)
-        }
-        100%{
-            transform:translate(1500px)
-        }
-    }
 `
 
 export const CardTitle = styled.h2`

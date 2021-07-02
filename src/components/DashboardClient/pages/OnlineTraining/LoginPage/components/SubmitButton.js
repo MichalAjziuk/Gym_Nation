@@ -7,7 +7,7 @@ const SubmitButton = ({ handleSubmitButtonPressed }) => {
                 className='login-page_button'
                 onClick={handleSubmitButtonPressed}
             >
-                Start using Videotalker
+                Start
             </button>
         </div>
     )

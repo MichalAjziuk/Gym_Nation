@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Icon1 from './images/your_training.svg'
 import Icon2 from './images/broadcasting.svg'
 import Icon3 from './images/trainings.svg'
 import Icon4 from './images/diets.svg'
 import Icon5 from './images/user.svg'
-import ProgressBar from './ProgressBar'
+import Icon6 from './images/logout.png'
 import firebase from '../../../../firebase'
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 import {
     Container,
     LogoWrap,
     Logo,
-    ProgressWrap,
+    CalendarWrap,
     MenuWrap,
     MenuCard,
     IconItem,
@@ -20,22 +22,19 @@ import {
 
 
 const Sidebar = () => {
-    // const [progress, setProgress] = useState(0);
-    const state = {
-        size: 200,
-        // progress,
-        strokeWidth: 12,
-        circleOneStroke: '#B8C0C0',
-        circleTwoStroke: '#000000'
-    }
+    const [value, onChange] = useState(new Date());
+    
     return (
         <Container>
             <LogoWrap>
                 <Logo to='/dashboard-client'>GYM NATION</Logo>
             </LogoWrap>
-            <ProgressWrap>
-                <ProgressBar { ...state}/>
-            </ProgressWrap>
+            <CalendarWrap>
+                <Calendar
+                    onChange={onChange}
+                    value={value}
+                />
+            </CalendarWrap>
             <MenuWrap>
                     <MenuCard to="/progress">
                         <IconItem src={Icon1}/>
@@ -58,7 +57,7 @@ const Sidebar = () => {
                         <TitleItem>Your profile</TitleItem>
                     </MenuCard>
                     <MenuCard onClick={() => firebase.auth().signOut()}>
-                        <IconItem src={Icon5}/>
+                        <IconItem src={Icon6}/>
                         <TitleItem>Logout</TitleItem>
                     </MenuCard>
             </MenuWrap>

@@ -8,7 +8,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './pages/PrivateRoute'
 import ForgotPassword from './components/ForgotPassword'
 import DashboardClient from './components/DashboardClient/dashboardClient'
-import Comments from './components/Comments';
+import FormNewUser from './components/FormNewUser';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path="/signin" component={SignIn} exact />
           <PrivateRoute path="/dashboard-client" component={DashboardClient} exact />
           <Route path="/forgot-password" component={ForgotPassword} />
-          <Route path="/comments" component={Comments} />
+          <PrivateRoute path="/form-new-user" component={FormNewUser} />
         </Switch>
       </AuthProvider>
     </Router>

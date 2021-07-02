@@ -10,6 +10,7 @@ import {
     FormButton, 
     FormContent, 
     FormH1, 
+    FormErrorWrap,
     FormError,
     FormInput, 
     FormLabel, 
@@ -48,12 +49,12 @@ const SignIn = () => {
             <IconWrap>
                 <Icon to='/'>Gym Nation</Icon>
             </IconWrap>
-              <FormWrap>
-                  <Photo src={Img}></Photo>
-                  <FormContent>
-                      <Form onSubmit={handleSubmit}>
+            <FormWrap>
+                <FormContent>
+                    <Photo src={Img}></Photo>
+                    <Form onSubmit={handleSubmit}>
                           <FormH1>Sign in to your account</FormH1>
-                          <FormError>{error}</FormError>
+                          {error && <FormErrorWrap><FormError>{error}</FormError></FormErrorWrap>}
                           <FormLabel htmlFor='for'>Email</FormLabel>
                           <FormInput type='email' ref={emailRef} required />
                           <FormLabel htmlFor='for'>Password</FormLabel>

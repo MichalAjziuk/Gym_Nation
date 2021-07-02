@@ -7,7 +7,8 @@ import Img3 from './images/sophia.jpg'
 import {
     Container,
     CommentsWrap,
-    ButtonTitle,
+    Wrap,
+    Title,
     CommentsButton,
     CommentCard,
     ClientImg,
@@ -33,7 +34,10 @@ const Comments = () => {
     return (
         <div id="community">
             <Container>
-                <ButtonTitle>If you want to see the opinions of our customers about our application, Click the button !</ButtonTitle>
+                <Wrap>
+                    <Title>If you want to see the opinions of our customers about our application</Title>
+                    <Title style={{color: '#0C969C'}}>Click the button !</Title>
+                </Wrap>
                 <CommentsButton onClick={openComments}>COMMENTS</CommentsButton>
                 <animated.div style={animation}>
                     <CommentsWrap>

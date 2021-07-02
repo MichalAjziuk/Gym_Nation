@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import logo from '../resources/logo.png'
 import UsernameInput from './components/UsernameInput'
 import SubmitButton from './components/SubmitButton'
 import { useHistory } from 'react-router-dom'
 import { setUsername } from '../store/actions/dashboardActions'
 import { registerNewUser } from '../utils/wssConnection/wssConnection'
+import live from '../../../components/Sidebar/images/live.svg'
 import './LoginPage.css'
 
 const LoginPage = ({saveUsername}) => {
@@ -22,10 +22,10 @@ const LoginPage = ({saveUsername}) => {
         <div className='login-page_container'>
             <div className='login-page_login_box'>
                 <div className='login-page_logo_container'>
-                    <img className='login-page_logo_image' src={logo} alt='OnlineTraining'/>
+                    <img className='login-page_logo_image' src={live} alt='live'/>
                 </div>
                 <div className='login-page_title_container'>
-                    <h2>Get on Board</h2>
+                    <h2>Start training live</h2>
                 </div>
                 <UsernameInput username={username} setUsername={setUsername} />
                 <SubmitButton handleSubmitButtonPressed={handleSubmitButtonPressed} />

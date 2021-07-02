@@ -22,7 +22,7 @@ const Sidebar = ({isOpen, toggle}) => {
                     <SidebarLink to="app" onClick={toggle}>Our App</SidebarLink>
                     <SidebarLink to="workouts" onClick={toggle}>Workouts and coaches</SidebarLink>
                     <SidebarLink to="comunnity" onClick={toggle}>Community</SidebarLink>
-                    <SidebarLink to="signup" onClick={toggle}>Sign Up</SidebarLink>
+                    <SidebarLink to="/signup" onClick={toggle}>Sign Up</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
                     <SidebarRoute to="/signin">Sign In</SidebarRoute>

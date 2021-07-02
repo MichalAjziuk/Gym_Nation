@@ -26,7 +26,7 @@ const CallingDialog = () => {
         <div className='direct_calling_dialog'>
             <span>Calling</span>
             <div style={styles.buttonContainer} onClick={handleHangUpButtonPressed}>
-                <MdCallEnd style={{width:'20px', height:'20px', fill: '#e6e5e8'}}/>
+                <MdCallEnd style={{width:'20px', height:'20px', fill: 'red'}}/>
             </div>
         </div>
     )

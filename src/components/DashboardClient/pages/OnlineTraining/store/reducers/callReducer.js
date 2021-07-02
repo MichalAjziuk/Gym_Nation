@@ -10,8 +10,8 @@ const initState = {
         reason: ''
     },
     remoteStream: null,
-    localCameraEnabled: false,
-    localMicrophoneEnabled: false,
+    localCameraEnabled: true,
+    localMicrophoneEnabled: true,
     groupCallActive: false,
     groupCallStreams: [],
     message: {
