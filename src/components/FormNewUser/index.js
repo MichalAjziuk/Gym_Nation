@@ -1,8 +1,7 @@
 import React, { useState, useRef } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import firebase from '../../firebase'
 import uuid from 'react-uuid'
-import { useLocation } from 'react-router-dom';
 import {
     Container,
     IconWrap,
