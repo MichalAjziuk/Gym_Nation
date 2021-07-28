@@ -1,3 +1,13 @@
+# Begining
+
+If you want to see how works videocall you need start gym-nation-server: 
+  1. Best tool to use will be Visual Studio Code
+  2. Open new terminal
+  3. Command: cd gym-nation-server
+  4. Command: npm start
+  5. Open second terminal 
+  6. Command: npm start (start the project)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
