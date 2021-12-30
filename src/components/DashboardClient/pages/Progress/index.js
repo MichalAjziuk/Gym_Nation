@@ -4,7 +4,10 @@ import Img1 from '../../../../images/blog_post1.jpg'
 import Img2 from '../../../../images/blog_post2.jpg'
 import Img3 from '../../../../images/blog_post3.jpg'
 import Img4 from '../../../../images/blog_post4.jpg'
-import BarChart from './components/BarChart'
+import Icon1 from '../../components/Sidebar/images/broadcasting.svg'
+import Icon2 from '../../components/Sidebar/images/trainings.svg'
+import Icon3 from '../../components/Sidebar/images/diets.svg'
+import Icon4 from '../../../../images/double-arrow.svg'
 import {
     Container,
     RecentDateWrap,
@@ -16,7 +19,6 @@ import {
     TrainingImageWrap,
     TrainingButton,
     Img,
-    ChartBlock,
     SecondMotivationBlock,
     SecondMotivationText,
     BlogWrap,
@@ -25,9 +27,14 @@ import {
     PostImageWrap,
     PostImage,
     PostTitle,
-    PostText
+    PostText,
+    PlanBlock,
+    IconItem,
+    CustomTitle,
+    PlanItem,
+    PlanText,
+    IconItemSpecial
 } from './ProgressElements'
-import PieChart from './components/PieChart'
 
 const Progress = () => {
     var showdate = new Date();
@@ -55,12 +62,22 @@ const Progress = () => {
                 </TrainingImageWrap>
             </WelcomeBlock>
             <SecondMotivationBlock>
-                <ChartBlock>
-                    <BarChart />
-                </ChartBlock>
-                <ChartBlock>
-                    <PieChart />
-                </ChartBlock>
+              <PlanBlock>
+                <CustomTitle>Optional Training Plan</CustomTitle>
+                <PlanItem>
+                    <IconItem src={Icon1}/>
+                    <PlanText>Online Training 3-4 times a week with one of personal trainers or in group</PlanText>
+                </PlanItem>
+                <IconItemSpecial src={Icon4}/>
+                <PlanItem>
+                    <IconItem src={Icon2}/>
+                    <PlanText>Trainings ( 30-45 min ) every day wherever you want</PlanText>
+                </PlanItem>
+                <PlanItem>
+                    <IconItem src={Icon3}/>
+                    <PlanText>Zero sugar, balanced meals for your better wellness</PlanText>
+                </PlanItem>
+              </PlanBlock>
                 <SecondMotivationText>
                     <h1 style={{marginBottom: "20px"}}>
                         "I hate every minute of training. But I said, <span style={{color: "#ffffff"}}>don't quit</span>

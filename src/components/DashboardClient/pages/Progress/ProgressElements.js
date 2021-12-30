@@ -86,15 +86,43 @@ export const Img = styled.img`
 
 export const SecondMotivationBlock = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     height: 300px;
 `
-export const ChartBlock = styled.div`
-    width: 370px;
-    margin: 20px 0 40px 10px;
-    background-color: #fff;
-    padding: 10px;
+export const PlanBlock = styled.div`
+    margin: 30px 10px 40px 20px;
+    display: flex;
+    flex-direction: column;
 `
+export const CustomTitle = styled.h2`
+    height: 40px;
+    font-size: 30px;
+`
+export const PlanItem = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0 0 10px;
+`
+
+export const PlanText = styled.p`
+    margin: 15px 0 0 10px; 
+    font-size: 16px;
+`
+
+export const IconItem = styled.img`
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+`
+
+export const IconItemSpecial = styled.img`
+    margin-left: 200px;
+    margin-top: 15px;
+    margin-bottom: -20px;
+    height: 50px;
+    width: 50px;
+`
+
 export const SecondMotivationText = styled.div`
     margin: 20px 10px 40px 10px;
     padding: 20px;
@@ -104,7 +132,7 @@ export const SecondMotivationText = styled.div`
 `
 export const TitleArea = styled.h2`
     display: flex;
-    margin: 180px 0 30px 20px;
+    margin: 100px 0 30px 20px;
     font-size: 23px;
     font-weight: 800;
 `

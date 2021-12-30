@@ -33,22 +33,6 @@ import {
     Calories
 } from './TrainingsElements'
 
-// const Training = ({ src, category, name}) => (
-//     <TrnBox onClick={() => openVideo({ HIITVideo, HIIT })}>
-//         <TrnImg src={HIIT} />
-//         <TrnCategory>HIIT with Grover Morgan</TrnCategory>
-//         <TrnName>Get Stronger</TrnName>
-//         <TrnInfo>HIIT training aimed at increasing strength and endurance.</TrnInfo>
-//         <DetailsBlock>
-//             <BrnImg src={Levels} />
-//             <Level>easy</Level>
-//             <FireImg src={Burn} />
-//             <Calories>600 calories burned</Calories>
-//         </DetailsBlock>
-//     </TrnBox>
-// )
-
-
 const Trainings = () => {
     const [showVideo, setShowVideo] = useState(false);
     const [videoSrc, setVideoSrc] = useState();

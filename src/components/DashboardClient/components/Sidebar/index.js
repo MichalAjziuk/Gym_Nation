@@ -50,7 +50,7 @@ const Sidebar = () => {
                     </MenuCard>
                     <MenuCard to="/diets">
                         <IconItem src={Icon4}/>
-                        <TitleItem>Diet plan</TitleItem>
+                        <TitleItem>Diet Plan</TitleItem>
                     </MenuCard>
                     <MenuCard to="/profile">
                         <IconItem src={Icon5}/>
